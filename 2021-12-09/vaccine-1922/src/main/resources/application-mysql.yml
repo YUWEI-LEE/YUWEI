@@ -1,0 +1,13 @@
+# Run MySQL:
+#   docker run -e MYSQL_DATABASE=demo -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql:8
+# Client:
+#   https://dev.mysql.com/downloads/workbench/
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
